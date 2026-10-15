@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Shows</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="content">
+      <!-- Barra de búsqueda interactiva -->
+      <form class="search-form">
+        <input 
+          type="search" 
+          name="query" 
+          placeholder="Buscar serie (ej: Breaking Bad, Dark...)" 
+          required 
+          autocomplete="off"
+        />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <header></header>
+      <article class="episodes"></article>
+    </div>
+
     <script type="module" src="./index.js"></script>
-</head>
-<body>
-    holahgjghj
-
-    <input type="text" class="taskInput">
-    <button type="button" class="taskButton">Add Task</button> 
-    <ul id="users">
-    
-
-    </ul>
-</body>
+  </body>
 </html>

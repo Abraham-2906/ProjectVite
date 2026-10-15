@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Encabezado con póster y título */
+header {
+  text-align: center;
+}
+
+header .poster {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  max-width: 210px;
+}
+
+/* Contenedor general de episodios */
+.episodes {
+  display: grid;
+  place-items: start;
+  place-content: center;
+}
+
+/* Fila de cada temporada */
+.season {
+  display: flex;
+}
+
+/* Celdas para cabecera de temporada y episodios */
+.season-header,
+.episode {
+  --size: 2rem;
+  width: var(--size);
+  height: var(--size);
+  background: var(--color, #333);
+  display: grid;
+  place-items: center;
+  margin: 2px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.season-header {
+  --color: #222;
+}
+
+/* Mapa de calor según el rating */
+.rating-0 { --color: #2b0a27; }
+.rating-1 { --color: #451010; }
+.rating-2 { --color: #922323; }
+.rating-3 { --color: #c53030; }
+.rating-4 { --color: #c53030; }
+.rating-5 { --color: #c53030; }
+.rating-6 { --color: #dd6b20; }
+.rating-7 { --color: #f6e05e; color: #333; }
+.rating-8 { --color: #48bb78; }
+.rating-9 { --color: #2f855a; }
+.rating-10 { --color: #4CAF50; }
+
+/* Barra de búsqueda */
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-form input:focus {
+  border-color: #4CAF50;
+}
+
+.search-form button {
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.search-form button:hover {
+  background-color: #43a047;
+}
+
+.search-form button:active {
+  transform: scale(0.98);
+}
+
+/* Efecto hover  */
+.episode {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.episode:hover {
+  transform: scale(1.25);
+  z-index: 10;
+}
